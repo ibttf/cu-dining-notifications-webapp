@@ -97,7 +97,7 @@ export function EmailSubscriptionForm({ onSubmit }: PreferencesFormProps) {
                   checked={field.value}
                   onCheckedChange={(checked) => field.onChange(checked)}
                 />
-                <FormLabel>vegan only</FormLabel>
+                <FormLabel>vegan</FormLabel>
               </div>
               <FormMessage />
             </FormItem>
@@ -114,7 +114,7 @@ export function EmailSubscriptionForm({ onSubmit }: PreferencesFormProps) {
                   checked={field.value}
                   onCheckedChange={(checked) => field.onChange(checked)}
                 />
-                <FormLabel>vegetarian only</FormLabel>
+                <FormLabel>vegetarian</FormLabel>
               </div>
               <FormMessage />
             </FormItem>
@@ -131,7 +131,7 @@ export function EmailSubscriptionForm({ onSubmit }: PreferencesFormProps) {
                   checked={field.value}
                   onCheckedChange={(checked) => field.onChange(checked)}
                 />
-                <FormLabel>halal only</FormLabel>
+                <FormLabel>halal</FormLabel>
               </div>
               <FormMessage />
             </FormItem>
