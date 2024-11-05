@@ -120,27 +120,24 @@ const Page: React.FC = () => {
   }
 
   return (
-    <main className="min-h-screen flex items-center justify-center">
+    <main className="min-h-screen flex flex-col items-center justify-center relative">
       <div className="max-w-lg w-full bg-white p-6 rounded-lg shadow-lg">
         <h1 className="text-2xl font-semibold mb-4 text-center">
-          No more 'dining.columbia.edu.' Just get an email
+          No more 'dining.columbia.edu' every day
         </h1>
         <p className="text-center mb-6">
-          put in your personal email + preferences. emails at 7am every day.
+          put in your personal email + preferences. daily emails at 7am
         </p>
         {!showUnsubscribe ? (
           <>
-            <EmailSubscriptionForm
-              onSubmit={handleSubscribeSubmit}
-              isLoading={isSubLoading}
-            />
+            <EmailSubscriptionForm onSubmit={handleSubscribeSubmit} />
             <div className="mt-4 text-center">
               <Button
                 variant="link"
                 onClick={() => setShowUnsubscribe(true)}
                 className="text-gray-500 hover:text-gray-700"
               >
-                Want to unsubscribe?
+                wanna unsubscribe?
               </Button>
             </div>
           </>
@@ -172,6 +169,21 @@ const Page: React.FC = () => {
           </div>
         )}
       </div>
+      <footer className="text-center text-gray-500 text-sm mt-8 mb-4">
+        issue to report? wanna start a company? dm me on ig{" "}
+        <a
+          href="https://instagram.com/choongington"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 hover:text-blue-700"
+        >
+          @choongington
+        </a>{" "}
+        or message me{" "}
+        <a href="tel:4709192464" className="text-blue-500 hover:text-blue-700">
+          (470) 919-2464
+        </a>
+      </footer>
     </main>
   )
 }

@@ -2,7 +2,13 @@
 import { NextResponse } from "next/server"
 import { DynamoDBClient, DeleteItemCommand } from "@aws-sdk/client-dynamodb"
 
-const dynamoDb = new DynamoDBClient({ region: "us-east-1" })
+const dynamoDb = new DynamoDBClient({
+  region: process.env.AWS_REGION,
+  credentials: {
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!
+  }
+})
 
 export async function POST(request: Request) {
   try {
